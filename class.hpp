@@ -7,4 +7,27 @@
 #ifndef ALGOCPP_FILE_CLASS
 #define ALGOCPP_FILE_CLASS
 
+#include <string>
+
+namespace algocpp
+{
+	namespace file
+	{
+		class File
+		{
+		private:
+			std::string filename;
+
+		public:
+			File(std::string filename);
+		};
+
+		File::File(std::string init)
+		{
+			filename = init;
+		}
+
+	}
+}
+
 #endif // ALGOCPP_FILE_CLASS
