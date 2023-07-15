@@ -8,6 +8,7 @@
 #define ALGOCPP_FILE_CLASS
 
 #include <string>
+#include <fstream>
 
 namespace algocpp
 {
@@ -17,16 +18,16 @@ namespace algocpp
 		{
 		private:
 			std::string filename;
+			std::ifstream read;
+			std::ofstream write;
 
 		public:
-			File(std::string filename);
+			File(std::string init)
+			{
+				filename = init;
+				read.open(filename, std::ios::in);
+			}
 		};
-
-		File::File(std::string init)
-		{
-			filename = init;
-		}
-
 	}
 }
 
